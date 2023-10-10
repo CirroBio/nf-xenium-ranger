@@ -4,6 +4,7 @@
 nextflow.enable.dsl=2
 
 process resegment {
+    publishDir params.output, mode: 'copy', overwrite: true
     input:
     path "xenium_bundle"
 

@@ -6,6 +6,7 @@ Nextflow workflow running Xenium Ranger
 ### Global
 
 - `input`: Comma-delimited list of folders with the Xenium bundle files
+- `output`: Output directory
 
 ### Resegment
 
