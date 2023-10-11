@@ -42,12 +42,12 @@ else
     echo "Ignoring --resegment-nuclei because parameter was not provided"
 fi
 
-echo "Running xeniumranger resegment with arguments: ${ARGS[@]}"
+echo "Running xeniumranger resegment with arguments: \${ARGS[@]}"
 
 xeniumranger \
     resegment \
     --xenium-bundle=\$PWD/xenium_bundle \
-    ${ARGS[@]}
+    \${ARGS[@]}
 
 """
 
