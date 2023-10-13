@@ -16,7 +16,7 @@ set -e
 
 # Log the contents of the input data
 ls -lahtr
-ls -lahtr *
+ls -lahtr xenium_bundle/
 
 # Only include the command line flag if the value of the
 # parameter is not the default
@@ -55,7 +55,7 @@ xeniumranger \
 
 # Log the contents of the output data
 ls -lahtr
-ls -lahtr *
+ls -lahtr outs/
 
 """
 
@@ -68,5 +68,6 @@ workflow {
             type: 'dir',
             checkIfExists: true
         )
+        .flatten()
         | resegment
 }
