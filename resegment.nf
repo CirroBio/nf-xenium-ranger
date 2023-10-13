@@ -9,7 +9,7 @@ process resegment {
     path xenium_bundle
 
     output:
-    path "outs/"
+    path "data"
 
     """#!/bin/bash
 set -e
