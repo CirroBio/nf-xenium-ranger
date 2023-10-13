@@ -14,6 +14,9 @@ process resegment {
     """#!/bin/bash
 set -e
 
+# Log the contents of the input data
+tree -lah .
+
 # Only include the command line flag if the value of the
 # parameter is not the default
 ARGS=()
@@ -48,6 +51,9 @@ xeniumranger \
     resegment \
     --xenium-bundle=\$PWD/xenium_bundle \
     \${ARGS[@]}
+
+# Log the contents of the output data
+tree -lah .
 
 """
 
