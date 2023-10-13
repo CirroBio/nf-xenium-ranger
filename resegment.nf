@@ -15,7 +15,8 @@ process resegment {
 set -e
 
 # Log the contents of the input data
-tree -lah .
+ls -lahtr
+ls -lahtr *
 
 # Only include the command line flag if the value of the
 # parameter is not the default
@@ -53,7 +54,8 @@ xeniumranger \
     \${ARGS[@]}
 
 # Log the contents of the output data
-tree -lah .
+ls -lahtr
+ls -lahtr *
 
 """
 
