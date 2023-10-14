@@ -4,12 +4,12 @@
 nextflow.enable.dsl=2
 
 process resegment {
-    publishDir params.output, mode: 'copy', overwrite: true
+    publishDir params.output, mode: 'copy', overwrite: true, saveAs: { filename -> filename.replace('xenium_analysis/', '') }
     input:
     path xenium_bundle
 
     output:
-    path "data"
+    path "xenium_analysis"
 
     """#!/bin/bash
 set -e
@@ -51,11 +51,12 @@ echo "Running xeniumranger resegment with arguments: \${ARGS[@]}"
 xeniumranger \
     resegment \
     --xenium-bundle=\$PWD/${xenium_bundle} \
-    \${ARGS[@]}
+    \${ARGS[@]} \
+    | tee xenium_analysis/xeniumranger-resegment.log
 
 # Log the contents of the output data
 ls -lahtr
-ls -lahtr data/
+ls -lahtr xenium_analysis/
 
 """
 
