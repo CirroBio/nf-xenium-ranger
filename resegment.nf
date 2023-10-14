@@ -52,7 +52,8 @@ xeniumranger \
     resegment \
     --xenium-bundle=\$PWD/${xenium_bundle} \
     \${ARGS[@]} \
-    | tee xenium_analysis/xeniumranger-resegment.log
+
+cp .command.log xenium_analysis/xeniumranger-resegment.log
 
 # Log the contents of the output data
 ls -lahtr
