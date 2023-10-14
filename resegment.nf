@@ -55,7 +55,7 @@ xeniumranger \
 
 # Log the contents of the output data
 ls -lahtr
-ls -lahtr outs/
+ls -lahtr data/
 
 """
 
