@@ -52,7 +52,7 @@ xeniumranger \
     resegment \
     --xenium-bundle=\$PWD/input \
     \${ARGS[@]} \
-    | xeniumranger-resegment.log
+    | tee xeniumranger-resegment.log
 
 mv xeniumranger-resegment.log xenium_analysis/
 
