@@ -10,6 +10,6 @@ Nextflow workflow running Xenium Ranger
 
 ### Resegment
 
-- `expansion_distance = 15`
+- `expansion_distance = 5`
 - `dapi_filter = 100`
 - `resegment_nuclei = "True"`
