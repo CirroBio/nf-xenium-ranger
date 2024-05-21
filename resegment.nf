@@ -39,13 +39,6 @@ else
     echo "Ignoring --dapi-filter because parameter was not provided"
 fi
 
-if [[ "${params.resegment_nuclei.toLowerCase()}" != "false" ]]; then
-    ARGS+=" --resegment-nuclei"
-    ARGS+=" ${params.resegment_nuclei.toLowerCase()}"
-else
-    echo "Ignoring --resegment-nuclei because parameter was not provided"
-fi
-
 echo "Running xeniumranger resegment with arguments: \${ARGS[@]}"
 
 xeniumranger \
