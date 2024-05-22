@@ -49,7 +49,7 @@ xeniumranger \
     | tee xeniumranger-resegment.log
 
 # Move outputs to the top-level directory
-mv xenium_analysis/* ./
+mv ${params.id}/* ./
 """
 
 }
